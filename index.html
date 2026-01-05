@@ -3,50 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <title>Gaurang Tiwari | Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+  <!-- HERO -->
   <header class="hero">
     <h1>Gaurang Tiwari</h1>
-    <p>Aspiring Data Analyst</p>
+    <p>Data Analyst • Power BI • Excel • SQL</p>
+
     <div class="links">
       <a href="mailto:gaurangtiwari22@gmail.com">Email</a>
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">LinkedIn</a>
       <a href="https://github.com/gaurangtiwari22" target="_blank">GitHub</a>
     </div>
   </header>
 
+  <!-- CONTENT -->
   <section>
-    <h2>About Me</h2>
-    <p>
-      I am an aspiring Data Analyst with hands-on experience in Excel, Power BI, SQL basics,
-      and dashboard creation. I enjoy turning raw data into meaningful insights.
-    </p>
-  </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>Excel (Pivot Tables, KPIs)</li>
-      <li>Power BI (Dashboards, DAX basics)</li>
-      <li>SQL (SELECT, WHERE, GROUP BY, JOIN)</li>
-      <li>Statistics (Basics)</li>
-    </ul>
-  </section>
+    <div class="section-card">
+      <h2>About Me</h2>
+      <p>
+        Aspiring Data Analyst with hands-on experience in Excel, Power BI, and SQL.
+        Skilled in building high-impact dashboards, extracting insights, and
+        presenting data in a business-ready format.
+      </p>
+    </div>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Power BI Micro Course – Skill Course</li>
-      <li>Workshop / Internship Certificate</li>
-    </ul>
+    <div class="section-card">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Excel Dashboards & Pivot Tables</li>
+        <li>Power BI (KPIs, DAX Basics)</li>
+        <li>SQL (SELECT, WHERE, GROUP BY, JOIN)</li>
+        <li>Data Cleaning & Analysis</li>
+        <li>Statistics (Basics)</li>
+        <li>Business Insights</li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2>Projects</h2>
+      <p><strong>Student Performance Analysis Dashboard</strong></p>
+      <p>
+        Interactive Power BI dashboard with KPIs, slicers, city & department analysis,
+        and performance insights.
+      </p>
+
+      <br>
+
+      <p><strong>Excel Analytics Dashboard</strong></p>
+      <p>
+        Excel dashboard using pivot tables, charts, KPIs, and structured datasets.
+      </p>
+    </div>
+
+    <div class="section-card">
+      <h2>Certifications & Courses</h2>
+      <p>• Power BI Micro Course (Skill Course)</p>
+      <p>• SQL Fundamentals</p>
+      <p>• Data Analytics Workshops</p>
+    </div>
+
+    <div class="section-card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:gaurangtiwari22@gmail.com">gaurangtiwari22@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/gaurangtiwari22" target="_blank">github.com/gaurangtiwari22</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">Add your LinkedIn</a></p>
+    </div>
+
   </section>
 
   <footer>
-    <p>© 2026 Gaurang Tiwari</p>
+    © 2026 Gaurang Tiwari
   </footer>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const cards = document.querySelectorAll('.section-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 
 </body>
 </html>
