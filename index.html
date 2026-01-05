@@ -1,105 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gaurang Tiwari | Data Analyst</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaurang Tiwari | Data Analyst Portfolio</title>
 
-  <!-- CSS -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <link rel="stylesheet" href="style.css">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Gaurang Tiwari</h1>
-    <p>Data Analyst • Power BI • Excel • SQL</p>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Gaurang<span>.</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="links">
-      <a href="mailto:gaurangtiwari22@gmail.com">Email</a>
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="https://github.com/gaurangtiwari22" target="_blank">GitHub</a>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
+    <h2>Data Analyst | SQL • Python • Power BI</h2>
+    <p>I transform raw data into insights that drive decisions.</p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- CONTENT -->
-  <section>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="about-text">
+    I am a passionate <strong>Data Analyst</strong> with hands-on experience in data cleaning,
+    visualization, and analysis. I enjoy solving business problems using data and building
+    dashboards that communicate insights clearly.
+  </p>
+</section>
 
-    <div class="section-card">
-      <h2>About Me</h2>
-      <p>
-        Aspiring Data Analyst with hands-on experience in Excel, Power BI, and SQL.
-        Skilled in building high-impact dashboards, extracting insights, and
-        presenting data in a business-ready format.
-      </p>
+<!-- SKILLS -->
+<section class="section dark" id="skills">
+  <h2 class="section-title">Skills & Tools</h2>
+
+  <div class="skills-grid">
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">Power BI</div>
+    <div class="skill-card">Excel</div>
+    <div class="skill-card">Pandas</div>
+    <div class="skill-card">NumPy</div>
+    <div class="skill-card">Data Cleaning</div>
+    <div class="skill-card">EDA</div>
+    <div class="skill-card">Dashboard Design</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Sales Performance Dashboard</h3>
+      <p><strong>Tools:</strong> Power BI, Excel</p>
+      <p>Built an interactive dashboard analyzing sales trends, top products,
+        and region-wise performance.</p>
+      <a href="#" class="project-link">View Project</a>
     </div>
 
-    <div class="section-card">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>Excel Dashboards & Pivot Tables</li>
-        <li>Power BI (KPIs, DAX Basics)</li>
-        <li>SQL (SELECT, WHERE, GROUP BY, JOIN)</li>
-        <li>Data Cleaning & Analysis</li>
-        <li>Statistics (Basics)</li>
-        <li>Business Insights</li>
-      </ul>
+    <div class="project-card">
+      <h3>Customer Churn Analysis</h3>
+      <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+      <p>Analyzed customer behavior to identify churn patterns and key drivers.</p>
+      <a href="#" class="project-link">View Project</a>
     </div>
 
-    <div class="section-card">
-      <h2>Projects</h2>
-      <p><strong>Student Performance Analysis Dashboard</strong></p>
-      <p>
-        Interactive Power BI dashboard with KPIs, slicers, city & department analysis,
-        and performance insights.
-      </p>
-
-      <br>
-
-      <p><strong>Excel Analytics Dashboard</strong></p>
-      <p>
-        Excel dashboard using pivot tables, charts, KPIs, and structured datasets.
-      </p>
+    <div class="project-card">
+      <h3>SQL Business Insights</h3>
+      <p><strong>Tools:</strong> MySQL</p>
+      <p>Wrote complex SQL queries to extract KPIs and business metrics.</p>
+      <a href="#" class="project-link">View Project</a>
     </div>
 
-    <div class="section-card">
-      <h2>Certifications & Courses</h2>
-      <p>• Power BI Micro Course (Skill Course)</p>
-      <p>• SQL Fundamentals</p>
-      <p>• Data Analytics Workshops</p>
-    </div>
+  </div>
+</section>
 
-    <div class="section-card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:gaurangtiwari22@gmail.com">gaurangtiwari22@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/gaurangtiwari22" target="_blank">github.com/gaurangtiwari22</a></p>
-      <p>LinkedIn: <a href="#" target="_blank">Add your LinkedIn</a></p>
-    </div>
+<!-- CERTIFICATIONS -->
+<section class="section dark" id="certifications">
+  <h2 class="section-title">Certifications</h2>
 
-  </section>
+  <ul class="cert-list">
+    <li>Google Data Analytics Professional Certificate</li>
+    <li>Python for Data Analysis</li>
+    <li>SQL for Data Science</li>
+    <li>Power BI Essentials</li>
+  </ul>
+</section>
 
-  <footer>
-    © 2026 Gaurang Tiwari
-  </footer>
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2 class="section-title">Contact Me</h2>
 
-  <!-- SCROLL ANIMATION SCRIPT -->
-  <script>
-    const cards = document.querySelectorAll('.section-card');
+  <div class="contact-icons">
+    <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/gaurangtiwari22" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    cards.forEach(card => observer.observe(card));
-  </script>
+  <p class="footer-text">© 2026 Gaurang Tiwari | Data Analyst</p>
+</section>
 
 </body>
 </html>
