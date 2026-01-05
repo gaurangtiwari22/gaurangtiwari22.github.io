@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurang Tiwari | Data Analyst Portfolio</title>
+  <title>Gaurang Tiwari | Data Analyst</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,142 +15,79 @@
 </head>
 <body>
 
+<!-- BACKGROUND SYSTEM -->
+<div class="gradient-bg"></div>
+<div class="noise"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar glass">
   <div class="logo">Gaurang<span>.</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
-    <h2>Data Analyst | SQL • Python • Power BI</h2>
-    <p>I transform raw data into meaningful insights that drive smarter business decisions.</p>
+  <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
+  <h2>Data Analyst | SQL • Python • Power BI</h2>
+  <p>Turning complex data into clear business insights.</p>
 
-    <div class="hero-buttons">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
-    </div>
+  <div class="hero-buttons">
+    <a href="#projects" class="btn magnetic primary">View Projects</a>
+    <a href="resume.pdf" class="btn magnetic secondary">Download Resume</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
-  <h2 class="section-title">About Me</h2>
-
-  <p class="about-text elite">
-    I am a <strong>results-driven Data Analyst</strong> who enjoys converting raw,
-    unstructured data into clear and actionable insights.
-    <br><br>
-    My approach always starts with <strong>understanding the business problem</strong>,
-    followed by using <strong>SQL, Python, Excel, and Power BI</strong> to clean,
-    analyze, and visualize data in a way that decision-makers can easily understand.
-    <br><br>
-    I strongly believe in <strong>data storytelling</strong> — focusing not only on
-    what the numbers say, but <em>why they matter</em>. I enjoy exploring datasets,
-    identifying patterns, and uncovering insights that are not immediately obvious.
-    <br><br>
-    I am currently seeking <strong>Data Analyst internship opportunities</strong>
-    where I can apply my skills on real-world data and grow into a high-impact
-    analytics professional.
+<section class="section glass" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a results-driven Data Analyst who transforms raw, unstructured data into
+    meaningful insights. I focus on data storytelling, business understanding,
+    and building dashboards that drive decisions.
   </p>
-
-  <div class="about-stats">
-    <div class="stat-box">
-      <h3>10+</h3>
-      <p>Projects & Case Studies</p>
-    </div>
-    <div class="stat-box">
-      <h3>5+</h3>
-      <p>Analytics Tools</p>
-    </div>
-    <div class="stat-box">
-      <h3>100%</h3>
-      <p>Hands-on Learning</p>
-    </div>
-  </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section dark" id="skills">
-  <h2 class="section-title">Skills & Tools</h2>
-
-  <div class="skills-grid">
-    <div class="skill-card">SQL</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">Power BI</div>
-    <div class="skill-card">Excel</div>
-    <div class="skill-card">Pandas</div>
-    <div class="skill-card">NumPy</div>
-    <div class="skill-card">EDA</div>
-    <div class="skill-card">Data Cleaning</div>
-    <div class="skill-card">Dashboard Design</div>
+<section class="section glass" id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card tilt">SQL</div>
+    <div class="card tilt">Python</div>
+    <div class="card tilt">Power BI</div>
+    <div class="card tilt">Excel</div>
+    <div class="card tilt">Pandas</div>
+    <div class="card tilt">EDA</div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <h3>Sales Performance Dashboard</h3>
-      <p><strong>Tools:</strong> Power BI, Excel</p>
-      <p>Designed an interactive dashboard analyzing sales trends, top products,
-      and region-wise performance to support business decisions.</p>
-      <a href="#" class="project-link">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Customer Churn Analysis</h3>
-      <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
-      <p>Analyzed customer behavior to identify churn patterns and key drivers
-      influencing retention.</p>
-      <a href="#" class="project-link">View Project</a>
-    </div>
-
-    <div class="project-card">
-      <h3>SQL Business Insights</h3>
-      <p><strong>Tools:</strong> MySQL</p>
-      <p>Used advanced SQL queries to extract KPIs and deliver meaningful business insights.</p>
-      <a href="#" class="project-link">View Project</a>
-    </div>
-
+<section class="section glass" id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card tilt">Sales Dashboard</div>
+    <div class="card tilt">Customer Churn Analysis</div>
+    <div class="card tilt">SQL Business Insights</div>
   </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section dark" id="certifications">
-  <h2 class="section-title">Certifications</h2>
-  <ul class="cert-list">
-    <li>Google Data Analytics Professional Certificate</li>
-    <li>Python for Data Analysis</li>
-    <li>SQL for Data Science</li>
-    <li>Power BI Essentials</li>
-  </ul>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-
-  <div class="contact-icons">
-    <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com/gaurangtiwari22" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/your-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+<section class="section glass" id="contact">
+  <h2>Contact</h2>
+  <div class="icons">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fas fa-envelope"></i></a>
   </div>
-
-  <p class="footer-text">© 2026 Gaurang Tiwari | Data Analyst</p>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
