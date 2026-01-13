@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaurang Tiwari | Data Analyst</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- BACKGROUND -->
@@ -26,85 +21,77 @@
   <div class="logo">Gaurang<span>.</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
+    <li><a href="#signature">Why Me</a></li>
+    <li><a href="#thinking">Thinking</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO (NO DEAD SPACE) -->
+<!-- HERO -->
 <section class="hero" id="home">
   <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
   <h2>Data Analyst | SQL • Python • Power BI</h2>
   <p>I don’t just analyze data — I explain what it means for the business.</p>
 </section>
 
-<!-- PROJECTS -->
-<section class="section glass" id="projects">
-  <h2>Projects</h2>
+<!-- SIGNATURE -->
+<section class="section glass" id="signature">
+  <h2>What Makes Me Different</h2>
+  <p class="center">
+    Most analysts start with tools.  
+    I start with the <strong>business question</strong>.
+  </p>
 
   <div class="grid">
-    <a class="project-card" href="projects/Sales_SQL_Project.docx" target="_blank">
-      <h3>Sales & Customer Analysis (SQL)</h3>
-      <p class="hidden">Business questions, SQL queries & insights</p>
-    </a>
-
-    <a class="project-card" href="projects/Student_Performance_Dashboard.xlsx" target="_blank">
-      <h3>Student Performance Dashboard</h3>
-      <p class="hidden">Excel + Power BI interactive analysis</p>
-    </a>
-
-    <a class="project-card" href="projects/PowerBI_Dashboard.pbix" target="_blank">
-      <h3>Power BI Analytics Dashboard</h3>
-      <p class="hidden">KPIs, trends & decision insights</p>
-    </a>
+    <div class="card">📌 I ask the right questions before touching data</div>
+    <div class="card">📊 I focus on insights, not just charts</div>
+    <div class="card">🧠 I explain data in plain business language</div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section class="section glass" id="certifications">
-  <h2>Certifications</h2>
-
-  <button class="cert-btn" onclick="openCert()">
-    Power BI Micro Course – Skill Course
-  </button>
+<!-- THINKING -->
+<section class="section glass" id="thinking">
+  <h2>How I Think as a Data Analyst</h2>
+  <div class="timeline">
+    <div class="step">1️⃣ Understand the business problem</div>
+    <div class="step">2️⃣ Identify relevant data sources</div>
+    <div class="step">3️⃣ Clean & validate the data</div>
+    <div class="step">4️⃣ Explore patterns & anomalies</div>
+    <div class="step">5️⃣ Build visuals that answer “why”</div>
+    <div class="step">6️⃣ Deliver insights with impact</div>
+  </div>
 </section>
 
-<!-- CERT MODAL -->
-<div id="certModal" class="modal">
-  <span class="close" onclick="closeCert()">&times;</span>
-  <img src="certificates/powerbi_certificate.png" class="modal-img">
-</div>
+<!-- PROJECTS -->
+<section class="section glass" id="projects">
+  <h2>Projects (Interactive)</h2>
+  <div class="grid">
+    <div class="project-card">
+      <h3>Sales Performance Dashboard</h3>
+      <p class="hidden">Identified 23% revenue growth opportunity</p>
+    </div>
+    <div class="project-card">
+      <h3>Customer Churn Analysis</h3>
+      <p class="hidden">Found top churn drivers</p>
+    </div>
+    <div class="project-card">
+      <h3>SQL Business Insights</h3>
+      <p class="hidden">Optimized KPIs using joins & CTEs</p>
+    </div>
+  </div>
+</section>
 
 <!-- CONTACT -->
 <section class="section glass" id="contact">
   <h2>Contact</h2>
-
-  <div class="contact-buttons">
-    <a class="contact-btn" href="https://github.com/gaurangtiwari22" target="_blank">
-      <i class="fab fa-github fa-lg"></i>
-    </a>
-
-    <a class="contact-btn" href="mailto:gaurangtiwari22@gmail.com">
-      <i class="fas fa-envelope fa-lg"></i>
-    </a>
-
-    <a class="contact-btn" href="https://instagram.com/gaurang_tiwari_" target="_blank">
-      <i class="fab fa-instagram fa-lg"></i>
-    </a>
+  <div class="icons">
+    <a href="https://github.com/gaurangtiwari22"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fas fa-envelope"></i></a>
   </div>
 </section>
 
 <script src="script.js"></script>
-
-<script>
-function openCert() {
-  document.getElementById("certModal").style.display = "block";
-}
-function closeCert() {
-  document.getElementById("certModal").style.display = "none";
-}
-</script>
-
 </body>
 </html>
