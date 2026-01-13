@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaurang Tiwari | Data Analyst Intern</title>
+  <title>Gaurang Tiwari | Data Analyst</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,11 +32,11 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (NO DEAD SPACE) -->
 <section class="hero" id="home">
   <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
-  <h2>Data Analyst Intern | SQL • Excel • Power BI</h2>
-  <p>Turning data into clear, actionable business insights.</p>
+  <h2>Data Analyst | SQL • Python • Power BI</h2>
+  <p>I don’t just analyze data — I explain what it means for the business.</p>
 </section>
 
 <!-- PROJECTS -->
@@ -45,19 +44,19 @@
   <h2>Projects</h2>
 
   <div class="grid">
-    <a class="project-card" href="projects/sales_sql_project.docx" target="_blank">
+    <a class="project-card" href="projects/Sales_SQL_Project.docx" target="_blank">
       <h3>Sales & Customer Analysis (SQL)</h3>
-      <p class="hidden">Complete SQL project with queries and insights</p>
+      <p class="hidden">Business questions, SQL queries & insights</p>
     </a>
 
-    <a class="project-card" href="projects/student_performance_dashboard.xlsx" target="_blank">
-      <h3>Student Performance Analysis (Excel)</h3>
-      <p class="hidden">Full Excel dataset and analysis</p>
+    <a class="project-card" href="projects/Student_Performance_Dashboard.xlsx" target="_blank">
+      <h3>Student Performance Dashboard</h3>
+      <p class="hidden">Excel + Power BI interactive analysis</p>
     </a>
 
-    <a class="project-card" href="projects/student_performance_dashboard.pbix" target="_blank">
-      <h3>Power BI Dashboard</h3>
-      <p class="hidden">Interactive Power BI dashboard</p>
+    <a class="project-card" href="projects/PowerBI_Dashboard.pbix" target="_blank">
+      <h3>Power BI Analytics Dashboard</h3>
+      <p class="hidden">KPIs, trends & decision insights</p>
     </a>
   </div>
 </section>
@@ -66,47 +65,46 @@
 <section class="section glass" id="certifications">
   <h2>Certifications</h2>
 
-  <div class="grid">
-    <button class="cert-btn" onclick="showCert()">
-      Power BI Micro Course – Skill Course
-    </button>
-  </div>
-
-  <!-- Certificate Modal -->
-  <div id="certModal" class="modal">
-    <span class="close" onclick="closeCert()">&times;</span>
-    <img src="certificates/powerbi_certificate.png" alt="Certificate" class="modal-img">
-  </div>
+  <button class="cert-btn" onclick="openCert()">
+    Power BI Micro Course – Skill Course
+  </button>
 </section>
+
+<!-- CERT MODAL -->
+<div id="certModal" class="modal">
+  <span class="close" onclick="closeCert()">&times;</span>
+  <img src="certificates/powerbi_certificate.png" class="modal-img">
+</div>
 
 <!-- CONTACT -->
 <section class="section glass" id="contact">
   <h2>Contact</h2>
 
   <div class="contact-buttons">
-    <a href="https://github.com/gaurangtiwari22" target="_blank" class="contact-btn">
-      <i class="fab fa-github"></i> GitHub
+    <a class="contact-btn" href="https://github.com/gaurangtiwari22" target="_blank">
+      <i class="fab fa-github fa-lg"></i>
     </a>
 
-    <a href="mailto:gaurangtiwari22@gmail.com" class="contact-btn">
-      <i class="fas fa-envelope"></i> Email
+    <a class="contact-btn" href="mailto:gaurangtiwari22@gmail.com">
+      <i class="fas fa-envelope fa-lg"></i>
     </a>
 
-    <a href="https://www.instagram.com/gaurang_tiwari_" target="_blank" class="contact-btn">
-      <i class="fab fa-instagram"></i> Instagram
+    <a class="contact-btn" href="https://instagram.com/gaurang_tiwari_" target="_blank">
+      <i class="fab fa-instagram fa-lg"></i>
     </a>
   </div>
 </section>
 
+<script src="script.js"></script>
+
 <script>
-  function showCert() {
-    document.getElementById("certModal").style.display = "block";
-  }
-  function closeCert() {
-    document.getElementById("certModal").style.display = "none";
-  }
+function openCert() {
+  document.getElementById("certModal").style.display = "block";
+}
+function closeCert() {
+  document.getElementById("certModal").style.display = "none";
+}
 </script>
 
-<script src="script.js"></script>
 </body>
 </html>
