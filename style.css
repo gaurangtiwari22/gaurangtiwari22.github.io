@@ -27,7 +27,6 @@ body {
   z-index: -5;
 }
 
-/* Light overlay to avoid darkness */
 .gradient-bg::after {
   content: "";
   position: absolute;
@@ -39,7 +38,6 @@ body {
   );
 }
 
-/* ANIMATION */
 @keyframes bg {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -159,20 +157,41 @@ body {
   color: #ffffff;
 }
 
-/* CONTACT */
-.icons a {
-  font-size: 34px;
-  margin: 0 18px;
+/* CONTACT ICONS — FIXED */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.icons a i {
+  font-size: 46px;
+  transition: transform 0.3s ease;
+}
+
+/* Original brand colors */
+.icons a .fa-github {
   color: #ffffff;
-  transition: transform 0.3s, color 0.3s;
 }
 
-.icons a:hover {
-  transform: scale(1.2);
-  color: #e0f2fe;
+.icons a .fa-linkedin {
+  color: #0A66C2;
 }
 
-/* CURSOR GLOW – BRIGHTER */
+.icons a .fa-envelope {
+  color: #EA4335;
+}
+
+.icons a .fa-instagram {
+  color: #E1306C;
+}
+
+.icons a:hover i {
+  transform: scale(1.25);
+}
+
+/* CURSOR GLOW */
 .cursor-glow {
   position: fixed;
   width: 350px;
