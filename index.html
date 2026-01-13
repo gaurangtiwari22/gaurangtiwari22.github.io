@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gaurang Tiwari | Data Analyst Intern</title>
 
   <!-- Fonts -->
@@ -27,9 +27,8 @@
   <div class="logo">Gaurang<span>.</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -41,77 +40,73 @@
   <p>Turning data into clear, actionable business insights.</p>
 </section>
 
-<!-- ABOUT -->
-<section class="section glass" id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a Data Analyst Intern with hands-on experience in SQL, Excel, and Power BI.
-    I focus on understanding business problems and using data to derive insights
-    that support informed decision-making.
-  </p>
-
-  <div class="grid">
-    <div class="card">📌 Business-first approach to data analysis</div>
-    <div class="card">📊 Focus on insights, not just charts</div>
-    <div class="card">🧠 Clear communication of results</div>
-  </div>
-</section>
-
 <!-- PROJECTS -->
 <section class="section glass" id="projects">
   <h2>Projects</h2>
 
   <div class="grid">
-    <div class="project-card">
+    <a class="project-card" href="projects/sales_sql_project.docx" target="_blank">
       <h3>Sales & Customer Analysis (SQL)</h3>
-      <p class="hidden">
-        Analyzed sales data to identify revenue trends and extract
-        product and customer insights using SQL.
-      </p>
-    </div>
+      <p class="hidden">Complete SQL project with queries and insights</p>
+    </a>
 
-    <div class="project-card">
-      <h3>Student Performance Analysis Dashboard</h3>
-      <p class="hidden">
-        Analyzed student performance data and built interactive
-        dashboards using Excel and Power BI.
-      </p>
-    </div>
+    <a class="project-card" href="projects/student_performance_dashboard.xlsx" target="_blank">
+      <h3>Student Performance Analysis (Excel)</h3>
+      <p class="hidden">Full Excel dataset and analysis</p>
+    </a>
+
+    <a class="project-card" href="projects/student_performance_dashboard.pbix" target="_blank">
+      <h3>Power BI Dashboard</h3>
+      <p class="hidden">Interactive Power BI dashboard</p>
+    </a>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section class="section glass" id="skills">
-  <h2>Skills</h2>
+<!-- CERTIFICATIONS -->
+<section class="section glass" id="certifications">
+  <h2>Certifications</h2>
 
   <div class="grid">
-    <div class="card">SQL</div>
-    <div class="card">MS Excel</div>
-    <div class="card">Power BI</div>
-    <div class="card">Data Visualization</div>
-    <div class="card">Business Analysis</div>
-    <div class="card">Insight Communication</div>
+    <button class="cert-btn" onclick="showCert()">
+      Power BI Micro Course – Skill Course
+    </button>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div id="certModal" class="modal">
+    <span class="close" onclick="closeCert()">&times;</span>
+    <img src="certificates/powerbi_certificate.png" alt="Certificate" class="modal-img">
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section glass" id="contact">
   <h2>Contact</h2>
-  <div class="icons">
-    <a href="https://github.com/gaurangtiwari22" target="_blank">
-      <i class="fab fa-github"></i>
+
+  <div class="contact-buttons">
+    <a href="https://github.com/gaurangtiwari22" target="_blank" class="contact-btn">
+      <i class="fab fa-github"></i> GitHub
     </a>
-    <a href="mailto:gaurangtiwari22@gmail.com">
-      <i class="fas fa-envelope"></i>
+
+    <a href="mailto:gaurangtiwari22@gmail.com" class="contact-btn">
+      <i class="fas fa-envelope"></i> Email
     </a>
-    <a href="#" title="LinkedIn (add later)">
-      <i class="fab fa-linkedin"></i>
+
+    <a href="https://www.instagram.com/gaurang_tiwari_" target="_blank" class="contact-btn">
+      <i class="fab fa-instagram"></i> Instagram
     </a>
   </div>
 </section>
 
-<!-- JS -->
-<script src="script.js"></script>
+<script>
+  function showCert() {
+    document.getElementById("certModal").style.display = "block";
+  }
+  function closeCert() {
+    document.getElementById("certModal").style.display = "none";
+  }
+</script>
 
+<script src="script.js"></script>
 </body>
 </html>
