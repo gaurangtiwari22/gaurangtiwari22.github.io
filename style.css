@@ -13,13 +13,22 @@ html, body {
 
 body {
   color: #e5e7eb;
+  background: transparent;
 }
 
-/* BACKGROUND */
+/* =========================
+   BACKGROUND GRADIENT
+========================= */
 .gradient-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(-45deg, #4facfe, #00f2fe);
+  background: linear-gradient(
+    -45deg,
+    #1e40af,
+    #38bdf8,
+    #60a5fa,
+    #1e40af
+  );
   background-size: 400% 400%;
   animation: bg 18s ease infinite;
   z-index: -5;
@@ -31,21 +40,37 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* GLASS */
-.glass {
-  background: rgba(255,255,255,0.18);
-  backdrop-filter: blur(18px);
-  border-radius: 20px;
+/* =========================
+   PARTICLES CANVAS (FIX)
+========================= */
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -3;
 }
 
-/* NAVBAR */
+/* =========================
+   GLASS EFFECT
+========================= */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   position: fixed;
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  padding: 14px 32px;
+  width: 88%;
+  padding: 14px 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,43 +82,40 @@ body {
   font-weight: 700;
 }
 
+.logo span {
+  color: #0f172a;
+}
+
 .navbar ul {
   display: flex;
   list-style: none;
 }
 
 .navbar ul li a {
-  color: #fff;
-  margin-left: 24px;
+  color: #ffffff;
+  margin-left: 28px;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* 🚀 HERO — FINAL FIX */
+/* =========================
+   HERO SECTION (FIXED)
+========================= */
 .hero {
-  min-height: 100svh;              /* mobile-safe viewport */
-  padding: 0 10%;
-  padding-top: 120px;              /* navbar offset */
+  min-height: 100vh;
+  padding: 140px 10% 0; /* 🔴 THIS REMOVES DEAD SPACE */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* FORCE HERO TO TOP ON MOBILE */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 90px;             /* smaller navbar on mobile */
-    min-height: calc(100svh - 90px);
-  }
-}
-
 .hero h1 {
-  font-size: 52px;
+  font-size: 56px;
   font-weight: 700;
 }
 
 .hero h1 span {
-  color: #0b3cff;                  /* darker name for impact */
+  color: #0f172a; /* darker name for impact */
 }
 
 .hero h2 {
@@ -103,29 +125,35 @@ body {
 
 .hero p {
   margin-top: 10px;
-  max-width: 600px;
+  max-width: 520px;
+  line-height: 1.6;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 .section {
-  width: 85%;
+  width: 80%;
   margin: 120px auto;
   padding: 80px;
   text-align: center;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
   margin-top: 40px;
 }
 
-.card, .project-card {
+.card,
+.project-card {
   padding: 36px;
   border-radius: 22px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255, 255, 255, 0.18);
   transition: transform 0.3s ease;
 }
 
@@ -134,33 +162,56 @@ body {
   transform: translateY(-10px);
 }
 
-/* PROJECT LINKS */
-.project-card a {
-  display: block;
-  margin-top: 12px;
-  color: #003cff;
-  font-weight: 600;
+/* =========================
+   PROJECT HOVER
+========================= */
+.project-card .hidden {
+  opacity: 0;
+  margin-top: 15px;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .hidden {
+  opacity: 1;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.step {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.25);
+}
+
+/* =========================
+   CONTACT ICONS
+========================= */
+.icons a {
+  font-size: 34px;
+  margin: 0 18px;
+  color: inherit;
   text-decoration: none;
 }
 
-/* CONTACT ICONS */
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-}
-
-.icons a img {
-  width: 48px;
-  height: 48px;
-}
-
-/* CURSOR GLOW */
+/* =========================
+   CURSOR GLOW
+========================= */
 .cursor-glow {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%);
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35),
+    transparent 70%
+  );
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: -2;
