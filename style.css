@@ -10,36 +10,16 @@ body {
   overflow-x: hidden;
 }
 
-/* BACKGROUND – BRIGHT & VIBRANT */
+/* BACKGROUND */
 .gradient-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-    -45deg,
-    #0b5ed7,
-    #1e90ff,
-    #38bdf8,
-    #2563eb,
-    #0ea5e9
-  );
-  background-size: 500% 500%;
-  animation: bg 16s ease infinite;
+  background: linear-gradient(-45deg, #1e90ff, #38bdf8, #60a5fa, #1e90ff);
+  background-size: 400% 400%;
+  animation: bg 18s ease infinite;
   z-index: -5;
 }
 
-/* Light overlay to avoid darkness */
-.gradient-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(255,255,255,0.18),
-    transparent 70%
-  );
-}
-
-/* ANIMATION */
 @keyframes bg {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -48,8 +28,8 @@ body {
 
 /* GLASS */
 .glass {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(16px);
   border-radius: 20px;
 }
 
@@ -63,16 +43,18 @@ body {
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 1000;
 }
 
 .logo {
   font-size: 24px;
   font-weight: 700;
+  color: #ffffff;
 }
 
 .logo span {
-  color: #ffffff;
+  color: #0b3cff;
 }
 
 .navbar ul {
@@ -81,28 +63,39 @@ body {
 }
 
 .navbar ul li a {
-  color: #f8fafc;
+  color: #ffffff;
   margin-left: 30px;
   text-decoration: none;
   font-weight: 500;
 }
 
-/* HERO */
+/* HERO — 🔥 FIXED HERE 🔥 */
 .hero {
   min-height: 100vh;
-  padding: 0 10%;
+  padding: 120px 10% 0; /* ✅ THIS FIXES THE DEAD SPACE */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .hero h1 {
-  font-size: 58px;
-  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
 }
 
 .hero span {
-  color: #e0f2fe;
+  color: #0b3cff;
+}
+
+.hero h2 {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
 }
 
 /* SECTIONS */
@@ -121,24 +114,24 @@ body {
   margin-top: 40px;
 }
 
-.card, .project-card {
+.card,
+.project-card {
   padding: 35px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.18);
-  transition: transform 0.3s, background 0.3s;
+  background: rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
 }
 
 .card:hover,
 .project-card:hover {
   transform: translateY(-10px);
-  background: rgba(255,255,255,0.25);
 }
 
-/* INTERACTIVE PROJECTS */
+/* PROJECT HOVER TEXT */
 .project-card .hidden {
   opacity: 0;
   margin-top: 15px;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .project-card:hover .hidden {
@@ -155,33 +148,38 @@ body {
 .step {
   padding: 18px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.22);
-  color: #ffffff;
+  background: rgba(255,255,255,0.25);
+  font-weight: 500;
 }
 
-/* CONTACT */
+/* CONTACT ICONS */
 .icons a {
-  font-size: 34px;
+  font-size: 42px;
   margin: 0 18px;
-  color: #ffffff;
-  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 
 .icons a:hover {
   transform: scale(1.2);
-  color: #e0f2fe;
 }
 
-/* CURSOR GLOW – BRIGHTER */
+/* BRAND COLORS */
+.icons a.github { color: #000000; }
+.icons a.instagram {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.icons a.gmail { color: #ea4335; }
+
+/* CURSOR GLOW */
 .cursor-glow {
   position: fixed;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,0.35),
-    transparent 70%
-  );
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: -2;
