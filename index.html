@@ -1,91 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaurang Tiwari | Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaurang Tiwari | Data Analyst</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+body{
+  background:#020617;
+  color:#f8fafc;
+  overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.bg{
+  position:fixed;inset:0;
+  background:linear-gradient(-45deg,#0ea5e9,#2563eb,#38bdf8,#1e40af);
+  background-size:500% 500%;
+  animation:bg 16s ease infinite;
+  z-index:-5;
+}
+@keyframes bg{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* GLASS */
+.glass{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(18px);
+  border-radius:22px;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:20px;left:50%;
+  transform:translateX(-50%);
+  width:86%;
+  padding:16px 42px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+nav .logo{
+  font-size:26px;
+  font-weight:700;
+}
+nav .logo span{color:#38bdf8;}
+nav ul{display:flex;list-style:none;}
+nav ul li a{
+  color:#f8fafc;
+  margin-left:28px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 12%;
+}
+.hero h1{
+  font-size:64px;
+  line-height:1.1;
+}
+.hero h1 span{color:#38bdf8;}
+.hero h2{
+  margin:16px 0;
+  font-weight:400;
+  opacity:.9;
+}
+.hero p{
+  max-width:520px;
+  opacity:.85;
+}
+
+/* SECTIONS */
+section{
+  width:82%;
+  margin:120px auto;
+  padding:90px;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+  margin-top:40px;
+}
+.card{
+  padding:40px;
+  border-radius:22px;
+  background:rgba(255,255,255,.18);
+  transition:.35s;
+}
+.card:hover{
+  transform:translateY(-12px);
+  background:rgba(255,255,255,.28);
+}
+
+/* PROJECT */
+.project h3{margin-bottom:10px;}
+.project p{opacity:.85;font-size:14px;}
+
+/* CONTACT */
+.icons{
+  display:flex;
+  justify-content:center;
+  gap:46px;
+  margin-top:30px;
+}
+.icons i{
+  font-size:56px;
+  transition:.35s;
+}
+.icons i:hover{transform:scale(1.3);}
+
+/* BRAND COLORS */
+.fa-github{color:white;}
+.fa-envelope{color:#EA4335;}
+.fa-instagram{
+  background:radial-gradient(circle at 30% 30%,
+  #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  opacity:.6;
+  padding-bottom:40px;
+}
+</style>
 </head>
+
 <body>
+<div class="bg"></div>
 
-<!-- BACKGROUND -->
-<div class="gradient-bg"></div>
-<canvas id="particles"></canvas>
-<div class="cursor-glow"></div>
-
-<!-- NAVBAR -->
-<nav class="navbar glass">
+<nav class="glass">
   <div class="logo">Gaurang<span>.</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
-    <li><a href="#signature">Why Me</a></li>
-    <li><a href="#thinking">Thinking</a></li>
+    <li><a href="#why">Why Me</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
   <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
-  <h2>Data Analyst | SQL • Python • Power BI</h2>
-  <p>I don’t just analyze data — I explain what it means for the business.</p>
-</section>
-
-<!-- SIGNATURE -->
-<section class="section glass" id="signature">
-  <h2>What Makes Me Different</h2>
-  <p class="center">
-    Most analysts start with tools.<br>
-    I start with the <strong>business question</strong>.
+  <h2>Data Analyst | SQL • Power BI • Excel</h2>
+  <p>
+    I don’t just analyze data —  
+    I translate numbers into decisions that move businesses.
   </p>
+</section>
 
+<section class="glass" id="why">
+  <h2>Why Recruiters Choose Me</h2>
   <div class="grid">
-    <div class="card">📌 I ask the right questions before touching data</div>
-    <div class="card">📊 I focus on insights, not just charts</div>
-    <div class="card">🧠 I explain data in plain business language</div>
+    <div class="card">🧠 I start with business questions, not tools</div>
+    <div class="card">📊 I turn raw data into clear insights</div>
+    <div class="card">🚀 I communicate results in plain language</div>
   </div>
 </section>
 
-<!-- THINKING -->
-<section class="section glass" id="thinking">
-  <h2>How I Think as a Data Analyst</h2>
-  <div class="timeline">
-    <div class="step">1️⃣ Understand the business problem</div>
-    <div class="step">2️⃣ Identify relevant data sources</div>
-    <div class="step">3️⃣ Clean & validate the data</div>
-    <div class="step">4️⃣ Explore patterns & anomalies</div>
-    <div class="step">5️⃣ Build visuals that answer “why”</div>
-    <div class="step">6️⃣ Deliver insights with impact</div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section glass" id="projects">
+<section class="glass" id="projects">
   <h2>Projects</h2>
   <div class="grid">
-    <div class="project-card">
+    <div class="card project">
       <h3>Sales Performance Dashboard</h3>
-      <p class="hidden">Identified revenue trends using Power BI & Excel.</p>
+      <p>Identified revenue trends using Power BI & Excel.</p>
     </div>
-
-    <div class="project-card">
+    <div class="card project">
       <h3>Student Performance Analysis</h3>
-      <p class="hidden">Built dashboards to analyze academic performance.</p>
+      <p>Built dashboards to track academic insights.</p>
     </div>
-
-    <div class="project-card">
-      <h3>Sales & Customer Analysis – SQL</h3>
-      <p class="hidden">Extracted insights using joins, filters, and aggregations.</p>
+    <div class="card project">
+      <h3>SQL Business Insights</h3>
+      <p>Extracted KPIs using joins, filters & aggregations.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section glass" id="contact">
+<section class="glass" id="contact">
   <h2>Contact</h2>
   <div class="icons">
     <a href="https://github.com/gaurangtiwari22" target="_blank"><i class="fab fa-github"></i></a>
@@ -94,6 +208,9 @@
   </div>
 </section>
 
-<script src="script.js"></script>
+<footer>
+  © 2026 Gaurang Tiwari · Data Analyst
+</footer>
+
 </body>
 </html>
