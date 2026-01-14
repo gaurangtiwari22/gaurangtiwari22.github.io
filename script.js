@@ -1,7 +1,14 @@
-/* 🔥 FORCE PAGE TO START AT TOP (REAL FIX) */
-window.onload = () => {
-  window.scrollTo(0, 0);
-};
+/* 🚫 DISABLE BROWSER SCROLL RESTORATION */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+/* 🔒 FORCE PAGE TO START AT TOP — AFTER LAYOUT */
+document.addEventListener('DOMContentLoaded', () => {
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+  });
+});
 
 /* CURSOR GLOW */
 const glow = document.querySelector('.cursor-glow');
@@ -25,7 +32,6 @@ if (canvas) {
   window.addEventListener('resize', resizeCanvas);
 
   let particles = [];
-
   for (let i = 0; i < 70; i++) {
     particles.push({
       x: Math.random() * canvas.width,
