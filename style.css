@@ -6,36 +6,18 @@
 }
 
 body {
-  color: #e5e7eb;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-/* BACKGROUND – BRIGHT */
+/* BACKGROUND */
 .gradient-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-    -45deg,
-    #0b5ed7,
-    #1e90ff,
-    #38bdf8,
-    #2563eb,
-    #0ea5e9
-  );
-  background-size: 500% 500%;
-  animation: bg 16s ease infinite;
+  background: linear-gradient(-45deg, #0ea5e9, #2563eb, #1e40af, #38bdf8);
+  background-size: 400% 400%;
+  animation: bg 15s ease infinite;
   z-index: -5;
-}
-
-.gradient-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(255,255,255,0.18),
-    transparent 70%
-  );
 }
 
 @keyframes bg {
@@ -46,8 +28,8 @@ body {
 
 /* GLASS */
 .glass {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(16px);
   border-radius: 20px;
 }
 
@@ -70,7 +52,7 @@ body {
 }
 
 .logo span {
-  color: #ffffff;
+  color: #38bdf8;
 }
 
 .navbar ul {
@@ -79,7 +61,7 @@ body {
 }
 
 .navbar ul li a {
-  color: #f8fafc;
+  color: #ffffff;
   margin-left: 30px;
   text-decoration: none;
   font-weight: 500;
@@ -96,11 +78,10 @@ body {
 
 .hero h1 {
   font-size: 58px;
-  color: #ffffff;
 }
 
 .hero span {
-  color: #e0f2fe;
+  color: #38bdf8;
 }
 
 /* SECTIONS */
@@ -111,78 +92,31 @@ body {
   text-align: center;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-/* CARDS */
-.card, .project-card {
-  padding: 35px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.18);
-  transition: transform 0.3s, background 0.3s;
-}
-
-.card:hover,
-.project-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.25);
-}
-
-/* PROJECT HOVER */
-.project-card .hidden {
-  opacity: 0;
-  margin-top: 15px;
-  transition: opacity 0.3s;
-}
-
-.project-card:hover .hidden {
-  opacity: 1;
-}
-
-/* TIMELINE */
-.timeline {
-  display: grid;
-  gap: 18px;
-  margin-top: 30px;
-}
-
-.step {
-  padding: 18px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.22);
-  color: #ffffff;
-}
-
-/* CONTACT ICONS – FINAL FIX */
+/* CONTACT ICONS — CORRECT BRANDING */
 .icons {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
   margin-top: 30px;
 }
 
 .icons a i {
-  font-size: 52px;
+  font-size: 54px;
   transition: transform 0.3s ease;
 }
 
 /* GitHub */
-.icons a .fa-github {
+.fa-github {
   color: #ffffff;
 }
 
-/* Gmail – original red */
-.icons a .fa-envelope {
+/* Gmail (original red) */
+.fa-envelope {
   color: #EA4335;
 }
 
-/* Instagram – original gradient */
-.icons a .fa-instagram {
+/* Instagram (original gradient) */
+.fa-instagram {
   background: radial-gradient(circle at 30% 30%,
     #feda75,
     #fa7e1e,
@@ -194,19 +128,15 @@ body {
 }
 
 .icons a:hover i {
-  transform: scale(1.3);
+  transform: scale(1.25);
 }
 
 /* CURSOR GLOW */
 .cursor-glow {
   position: fixed;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(
-    circle,
-    rgba(255,255,255,0.35),
-    transparent 70%
-  );
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: -2;
