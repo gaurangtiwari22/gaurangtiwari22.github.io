@@ -5,13 +5,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* 🔥 THIS IS THE CRITICAL FIX */
 body {
   color: #e5e7eb;
   overflow-x: hidden;
+  padding-top: 110px; /* navbar height */
 }
 
 /* BACKGROUND */
@@ -20,7 +18,7 @@ body {
   inset: 0;
   background: linear-gradient(-45deg, #1e90ff, #38bdf8, #60a5fa, #1e90ff);
   background-size: 400% 400%;
-  animation: bg 16s ease infinite;
+  animation: bg 18s ease infinite;
   z-index: -5;
 }
 
@@ -30,9 +28,9 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* GLASS */
+/* GLASS EFFECT */
 .glass {
-  background: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.12);
   backdrop-filter: blur(16px);
   border-radius: 20px;
 }
@@ -54,11 +52,10 @@ body {
 .logo {
   font-size: 24px;
   font-weight: 700;
-  color: #ffffff;
 }
 
 .logo span {
-  color: #0b3cff;
+  color: #0b3c5d;
 }
 
 .navbar ul {
@@ -73,33 +70,32 @@ body {
   font-weight: 500;
 }
 
-/* 🔥 HERO — REAL FIX 🔥 */
+/* HERO */
 .hero {
-  min-height: calc(100vh - 80px); /* removes dead space */
-  padding: 100px 10% 0;          /* aligns name immediately */
+  min-height: calc(100vh - 110px); /* 🔥 MATCHES BODY PADDING */
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 700;
 }
 
 .hero span {
-  color: #0b3cff;
+  color: #0b3c5d; /* darker for impact */
 }
 
 .hero h2 {
-  margin-top: 14px;
+  margin-top: 15px;
   font-weight: 500;
 }
 
 .hero p {
   margin-top: 10px;
-  font-size: 16px;
-  opacity: 0.95;
+  max-width: 600px;
 }
 
 /* SECTIONS */
@@ -118,11 +114,12 @@ body {
   margin-top: 40px;
 }
 
+/* CARDS */
 .card,
 .project-card {
   padding: 35px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.18);
   transition: transform 0.3s ease;
 }
 
@@ -131,11 +128,11 @@ body {
   transform: translateY(-10px);
 }
 
-/* PROJECT DETAILS */
+/* PROJECT HOVER TEXT */
 .project-card .hidden {
   opacity: 0;
   margin-top: 15px;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
 }
 
 .project-card:hover .hidden {
@@ -152,40 +149,26 @@ body {
 .step {
   padding: 18px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.28);
-  font-weight: 500;
+  background: rgba(11,60,93,0.25);
 }
 
 /* CONTACT ICONS */
 .icons a {
-  font-size: 44px;
+  font-size: 42px;
   margin: 0 18px;
   text-decoration: none;
-  display: inline-block;
-  transition: transform 0.25s ease;
 }
 
-.icons a:hover {
-  transform: scale(1.25);
-}
-
-/* BRAND COLORS */
-.icons a.github { color: #000; }
-
-.icons a.instagram {
-  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.icons a.gmail { color: #ea4335; }
+.icons a.github { color: #000000; }
+.icons a.instagram { color: #E4405F; }
+.icons a.gmail { color: #EA4335; }
 
 /* CURSOR GLOW */
 .cursor-glow {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35), transparent 70%);
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: -2;
