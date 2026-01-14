@@ -1,77 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gaurang Tiwari | Data Analyst</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurang Tiwari | Data Analyst</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-
-<style>
-/* HERO TEXT ANIMATION */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.9s ease forwards;
-}
-.fade-up.delay-1 { animation-delay: 0.2s; }
-.fade-up.delay-2 { animation-delay: 0.4s; }
-.fade-up.delay-3 { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* NAME – DARK & IMPACTFUL */
-.name {
-  color: #020617;
-  background: rgba(255,255,255,0.9);
-  padding: 6px 16px;
-  border-radius: 14px;
-  font-weight: 800;
-}
-
-/* CTA BUTTONS */
-.hero-buttons {
-  margin-top: 28px;
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.cta {
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.cta.primary {
-  background: #ffffff;
-  color: #020617;
-}
-
-.cta.primary:hover {
-  transform: translateY(-3px);
-}
-
-.cta.secondary {
-  border: 2px solid #ffffff;
-  color: #ffffff;
-}
-
-.cta.secondary:hover {
-  background: rgba(255,255,255,0.15);
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- BACKGROUND -->
@@ -84,7 +21,8 @@
   <div class="logo">Gaurang<span>.</span></div>
   <ul>
     <li><a href="#home">Home</a></li>
-    <li><a href="#why">Why Me</a></li>
+    <li><a href="#signature">Why Me</a></li>
+    <li><a href="#thinking">Thinking</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -92,57 +30,82 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <h1 class="fade-up">
-    Hi, I’m <span class="name">Gaurang Tiwari</span>
-  </h1>
-
-  <h2 class="fade-up delay-1">
-    Data Analyst | SQL • Power BI • Excel
-  </h2>
-
-  <p class="fade-up delay-2">
-    I turn raw data into clear insights that help businesses
-    make confident decisions.
-  </p>
-
-  <div class="hero-buttons fade-up delay-3">
-    <a href="#projects" class="cta primary">View My Work</a>
-    <a href="resume.pdf" class="cta secondary" download>Download Resume</a>
-  </div>
-
-  <p class="fade-up delay-3" style="margin-top:18px; opacity:0.85;">
-    ✅ Open to Data Analyst Internships
-  </p>
+  <h1>Hi, I'm <span>Gaurang Tiwari</span></h1>
+  <h2>Data Analyst | SQL • Python • Power BI</h2>
+  <p>I don’t just analyze data — I explain what it means for the business.</p>
 </section>
 
-<!-- WHY ME -->
-<section class="section glass" id="why">
-  <h2>Why Recruiters Choose Me</h2>
+<!-- SIGNATURE -->
+<section class="section glass" id="signature">
+  <h2>What Makes Me Different</h2>
+  <p>
+    Most analysts start with tools.  
+    I start with the <strong>business question</strong>.
+  </p>
+
   <div class="grid">
-    <div class="card">🧠 I start with business questions, not tools</div>
-    <div class="card">📊 Strong fundamentals in SQL, Excel & Power BI</div>
-    <div class="card">🗣️ I explain insights in clear, simple language</div>
+    <div class="card">📌 I ask the right questions before touching data</div>
+    <div class="card">📊 I focus on insights, not just charts</div>
+    <div class="card">🧠 I explain data in plain business language</div>
+  </div>
+</section>
+
+<!-- THINKING -->
+<section class="section glass" id="thinking">
+  <h2>How I Think as a Data Analyst</h2>
+
+  <div class="timeline">
+    <div class="step">1️⃣ Understand the business problem</div>
+    <div class="step">2️⃣ Identify relevant data sources</div>
+    <div class="step">3️⃣ Clean & validate the data</div>
+    <div class="step">4️⃣ Explore patterns & anomalies</div>
+    <div class="step">5️⃣ Build visuals that answer “why”</div>
+    <div class="step">6️⃣ Deliver insights with impact</div>
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section class="section glass" id="projects">
   <h2>Projects</h2>
+
   <div class="grid">
-    <div class="card">
-      <h3>Sales & Customer Analysis (SQL)</h3>
-      <p>Analyzed sales data to uncover revenue trends and customer behavior.</p>
+
+    <!-- SALES DASHBOARD -->
+    <div class="project-card">
+      <h3>Sales Performance Dashboard</h3>
+      <p class="hidden">
+        <a href="https://github.com/gaurangtiwari22/gaurangtiwari22.github.io/raw/refs/heads/main/projects/Gaurang%20Tiwari%20%E2%80%93%20Student%20Performance%20Dashboard.xlsx" target="_blank">
+          📊 Download Excel Dashboard
+        </a><br><br>
+        <a href="https://github.com/gaurangtiwari22/gaurangtiwari22.github.io/raw/refs/heads/main/projects/Gaurang%20Tiwari%20%E2%80%93%20Student%20Performance%20Dashboard%20-%202.pbix" target="_blank">
+          📈 Download Power BI Dashboard
+        </a>
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Student Performance Dashboard</h3>
-      <p>Built interactive dashboards using Excel and Power BI.</p>
+    <!-- STUDENT PERFORMANCE -->
+    <div class="project-card">
+      <h3>Student Performance Analysis</h3>
+      <p class="hidden">
+        <a href="https://github.com/gaurangtiwari22/gaurangtiwari22.github.io/raw/refs/heads/main/projects/Gaurang%20Tiwari%20%E2%80%93%20Student%20Performance%20Analysis%20Dashboard.pbix" target="_blank">
+          📊 Download Power BI Analysis
+        </a>
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Business Insights Dashboard</h3>
-      <p>Visualized KPIs to support data-driven decision making.</p>
+    <!-- SQL PROJECT -->
+    <div class="project-card">
+      <h3>SQL Business Insights</h3>
+      <p class="hidden">
+        <a href="https://github.com/gaurangtiwari22/gaurangtiwari22.github.io/raw/refs/heads/main/projects/SQL%20Project.docx" target="_blank">
+          🗂 View SQL Project (DOC)
+        </a><br><br>
+        <a href="https://github.com/gaurangtiwari22/gaurangtiwari22.github.io/raw/refs/heads/main/projects/sales.csv.xlsx" target="_blank">
+          📁 Download Dataset
+        </a>
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -150,15 +113,9 @@
 <section class="section glass" id="contact">
   <h2>Contact</h2>
   <div class="icons">
-    <a href="https://github.com/gaurangtiwari22" target="_blank">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="mailto:gaurangtiwari22@gmail.com">
-      <i class="fas fa-envelope"></i>
-    </a>
-    <a href="https://www.instagram.com/gaurang_tiwari_/" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
+    <a href="https://github.com/gaurangtiwari22" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:gaurangtiwari22@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.instagram.com/gaurang_tiwari_" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 </section>
 
