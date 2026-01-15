@@ -1,6 +1,6 @@
 function openImage(src) {
   const modal = document.getElementById('modal');
-  const img = document.getElementById('modalContent');
+  const img = document.getElementById('modalImg');
   img.src = src;
   modal.style.display = 'flex';
 }
