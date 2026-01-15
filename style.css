@@ -216,3 +216,6 @@ body::after {
   z-index: -2;
   pointer-events: none;
 }
+section h3 {
+  font-weight: 800;
+}
