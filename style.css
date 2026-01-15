@@ -177,3 +177,10 @@ h3 {
   max-height: 90%;
   border-radius: 14px;
 }
+/* LIVE BACKGROUND CANVAS */
+#bgCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
