@@ -113,13 +113,15 @@ body {
   transform: translateY(-10px);
 }
 
-/* ============================= */
-/* ✅ FIXED PART — NOTHING ELSE */
-/* ============================= */
+/* ===================================== */
+/* ✅ FINAL FIX — NO HOVER DEPENDENCY */
+/* ===================================== */
 
-/* Project content MUST be visible always */
 .project-card .hidden {
-  opacity: 1;          /* ← THIS IS THE ONLY LOGIC CHANGE */
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
   margin-top: 15px;
 }
 
@@ -136,7 +138,7 @@ body {
   background: rgba(56,189,248,0.12);
 }
 
-/* CONTACT ICONS */
+/* CONTACT */
 .icons a {
   font-size: 28px;
   margin: 0 15px;
