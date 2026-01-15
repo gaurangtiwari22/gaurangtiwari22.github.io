@@ -1,11 +1,32 @@
+/* ========= MODAL FUNCTIONS (DO NOT REMOVE) ========= */
+function openImage(src) {
+  const modal = document.getElementById('modal');
+  const img = document.getElementById('modalImg');
+  img.src = src;
+  modal.style.display = 'flex';
+}
+
+function openPDF(src) {
+  window.open(src, '_blank');
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+/* ========= LIVE BACKGROUND ANIMATION ========= */
 const canvas = document.getElementById("bgCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
 let particles = [];
-const count = 80;
+const count = 90;
 
 for (let i = 0; i < count; i++) {
   particles.push({
@@ -37,8 +58,3 @@ function animate() {
 }
 
 animate();
-
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
