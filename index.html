@@ -1,4 +1,4 @@
-cat > /home/claude/portfolio/index_final.html << 'HTMLEOF'
+cat > /home/claude/portfolio/index_final2.html << 'HTMLEOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +35,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:fl
 .hero-greeting{font-size:0.9rem;color:var(--gold);font-weight:500;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;}
 h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-0.03em;margin-bottom:1rem;}
 h1 .gold{color:var(--gold);}
-.hero-title{font-size:1.1rem;color:var(--blue-light);font-weight:500;margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace;}
+.hero-title{font-size:1.1rem;color:var(--blue-light);font-weight:500;margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace;min-height:1.6rem;}
 .hero-desc{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:2.5rem;max-width:500px;}
 .hero-desc strong{color:var(--white);}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
@@ -79,37 +79,53 @@ h1 .gold{color:var(--gold);}
 .skill-tag{background:var(--navy3);color:var(--muted);font-size:0.68rem;padding:0.15rem 0.5rem;border-radius:3px;font-family:'JetBrains Mono',monospace;}
 
 .projects-list{display:flex;flex-direction:column;gap:1.5rem;}
-.project-card{background:var(--navy2);border:1px solid var(--border);border-radius:12px;padding:2rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;transition:all 0.3s;}
+.project-card{background:var(--navy2);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all 0.3s;}
 .project-card:hover{border-color:var(--blue-light);box-shadow:0 8px 40px rgba(0,0,0,0.3);}
 .project-card.featured{border-color:var(--gold);border-left:4px solid var(--gold);}
+.project-top{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;margin-bottom:1.5rem;}
 .project-badge{display:inline-block;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.7rem;border-radius:3px;margin-bottom:0.8rem;font-family:'JetBrains Mono',monospace;}
 .badge-featured{background:rgba(201,168,76,0.15);color:var(--gold);border:1px solid rgba(201,168,76,0.3);}
 .badge-excel{background:rgba(34,197,94,0.1);color:#4ADE80;border:1px solid rgba(34,197,94,0.2);}
 .badge-sql{background:rgba(251,146,60,0.1);color:#FB923C;border:1px solid rgba(251,146,60,0.2);}
 .project-title{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.6rem;}
 .project-desc{color:var(--muted);font-size:0.88rem;line-height:1.7;margin-bottom:1rem;}
-.project-tools{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;}
+.project-tools{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.2rem;}
 .ptool{background:var(--navy3);border:1px solid var(--border);color:var(--text);font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:4px;font-family:'JetBrains Mono',monospace;}
-.project-links{display:flex;gap:1rem;flex-wrap:wrap;}
-.project-link{color:var(--blue-light);text-decoration:none;font-size:0.82rem;font-weight:600;display:inline-flex;align-items:center;gap:0.3rem;transition:all 0.2s;border:1px solid rgba(46,134,217,0.3);padding:0.4rem 0.9rem;border-radius:5px;}
-.project-link:hover{color:var(--gold);border-color:var(--gold);}
-.project-metrics{display:flex;flex-direction:column;gap:0.8rem;min-width:140px;}
+.project-metrics{display:flex;flex-direction:column;gap:0.8rem;min-width:130px;}
 .pm{background:var(--navy3);border:1px solid var(--border);border-radius:8px;padding:0.8rem 1rem;text-align:center;}
 .pm-val{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:700;color:var(--gold);}
 .pm-label{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.2rem;}
 
-/* CERTIFICATES — inline image display */
+.project-link-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1.1rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.8rem;transition:all 0.2s;border:1px solid rgba(46,134,217,0.3);color:var(--blue-light);background:rgba(26,111,191,0.08);margin-right:0.5rem;margin-bottom:0.5rem;}
+.project-link-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.08);}
+
+/* SQL GALLERY */
+.sql-gallery{background:var(--navy3);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1rem;}
+.gallery-header{padding:0.8rem 1.2rem;background:var(--navy2);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+.gallery-title{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--muted);}
+.gallery-counter{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:var(--gold);}
+.gallery-img-wrap{position:relative;min-height:300px;display:flex;align-items:center;justify-content:center;padding:1rem;}
+.gallery-img-wrap img{max-width:100%;max-height:400px;border-radius:6px;display:block;}
+.gallery-controls{display:flex;justify-content:center;gap:0.8rem;padding:1rem;border-top:1px solid var(--border);}
+.gallery-btn{background:var(--navy2);border:1px solid var(--border);color:var(--text);padding:0.4rem 1.2rem;border-radius:6px;cursor:pointer;font-size:0.82rem;font-weight:600;transition:all 0.2s;}
+.gallery-btn:hover{border-color:var(--gold);color:var(--gold);}
+.gallery-dots{display:flex;gap:0.4rem;align-items:center;}
+.gallery-dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.2s;}
+.gallery-dot.active{background:var(--gold);width:18px;border-radius:3px;}
+
+/* CERTIFICATES */
 .certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;}
 .cert-item{background:var(--navy2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all 0.3s;}
 .cert-item:hover{border-color:var(--gold);transform:translateY(-3px);}
 .cert-header{padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--border);}
-.cert-icon{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,rgba(26,111,191,0.2),rgba(201,168,76,0.2));display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.cert-icon{width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,rgba(26,111,191,0.2),rgba(201,168,76,0.2));display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
 .cert-name{font-weight:600;color:var(--white);font-size:0.88rem;margin-bottom:0.1rem;}
 .cert-by{color:var(--muted);font-size:0.75rem;}
 .cert-date{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--gold);}
-.cert-img-wrap{padding:1rem;background:var(--navy3);}
+.cert-img-wrap{padding:1rem;background:var(--navy3);text-align:center;}
 .cert-img-wrap img{width:100%;border-radius:6px;display:block;}
-.cert-img-wrap embed{width:100%;height:200px;border-radius:6px;display:block;border:none;}
+.cert-pdf-btn{display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:2rem;color:var(--blue-light);text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s;border:2px dashed var(--border);border-radius:8px;margin:1rem;}
+.cert-pdf-btn:hover{border-color:var(--gold);color:var(--gold);}
 
 .contact-box{background:var(--navy2);border:1px solid var(--border);border-radius:16px;padding:4rem;text-align:center;position:relative;overflow:hidden;}
 .contact-box::after{content:'';position:absolute;bottom:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(26,111,191,0.1),transparent 70%);pointer-events:none;}
@@ -130,8 +146,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
   #hero{grid-template-columns:1fr;padding:7rem 2rem 3rem;}
   .hero-right{display:none;}
   .about-grid,.skills-grid,.certs-grid{grid-template-columns:1fr;}
-  .project-card{grid-template-columns:1fr;}
-  .project-metrics{flex-direction:row;}
+  .project-top{grid-template-columns:1fr;}
   .section{padding:4rem 1.5rem;}
   nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
@@ -157,7 +172,7 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
     <div class="availability"><div class="availability-dot"></div>Available for Internship · Mumbai</div>
     <div class="hero-greeting">Hello, I'm</div>
     <h1>Gaurang<br><span class="gold">Tiwari</span></h1>
-    <div class="hero-title" id="typed-role">Data Analyst</div>
+    <div class="hero-title" id="typed-role"></div>
     <p class="hero-desc">BSc IT graduate who turns <strong>raw business data into clear decisions</strong>. I build interactive dashboards, write SQL queries, and analyze data — making it work for the people who need it most.</p>
     <div class="hero-btns">
       <a href="https://gaurangtiwari22.github.io/Gaurang_Tiwari_Ecommerce_Dashboard.pdf" target="_blank" class="btn-gold">View My Dashboard ↗</a>
@@ -282,14 +297,13 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
       </div>
     </div>
     <div class="skill-card">
-      <div class="skill-icon">📋</div>
-      <div class="skill-name">Business Analysis</div>
+      <div class="skill-icon">🤝</div>
+      <div class="skill-name">Soft Skills</div>
       <div class="skill-tags">
-        <span class="skill-tag">BRD</span>
-        <span class="skill-tag">FRD</span>
-        <span class="skill-tag">User Stories</span>
-        <span class="skill-tag">SDLC</span>
-        <span class="skill-tag">UAT</span>
+        <span class="skill-tag">Communication</span>
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Attention to Detail</span>
+        <span class="skill-tag">Team Player</span>
       </div>
     </div>
   </div>
@@ -304,75 +318,87 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
   </div>
   <div class="projects-list">
 
+    <!-- PROJECT 1 — POWER BI -->
     <div class="project-card featured">
-      <div>
-        <div class="project-badge badge-featured">⭐ Featured</div>
-        <div class="project-title">E-Commerce Sales Analytics Dashboard</div>
-        <div class="project-desc">3-page interactive Power BI dashboard analyzing 501 orders across 8 product categories and 6 cities for the full year 2024. Built 6 DAX measures tracking total revenue of ₹6.97 lakhs, 12.57% return rate, and delivery partner performance. Features slicers, KPI cards, and drill-down analysis across Overview, Sales & Performance, and Returns & Insights pages.</div>
-        <div class="project-tools">
-          <span class="ptool">Power BI</span>
-          <span class="ptool">DAX</span>
-          <span class="ptool">Power Query</span>
-          <span class="ptool">Excel</span>
-          <span class="ptool">SQL</span>
+      <div class="project-top">
+        <div>
+          <div class="project-badge badge-featured">⭐ Featured</div>
+          <div class="project-title">E-Commerce Sales Analytics Dashboard</div>
+          <div class="project-desc">3-page interactive Power BI dashboard analyzing 501 orders across 8 product categories and 6 cities for the full year 2024. Built 6 DAX measures tracking total revenue of ₹6.97 lakhs, 12.57% return rate, and delivery partner performance. Features slicers, KPI cards, and drill-down analysis.</div>
+          <div class="project-tools">
+            <span class="ptool">Power BI</span>
+            <span class="ptool">DAX</span>
+            <span class="ptool">Power Query</span>
+            <span class="ptool">Excel</span>
+            <span class="ptool">SQL</span>
+          </div>
+          <a href="https://gaurangtiwari22.github.io/Gaurang_Tiwari_Ecommerce_Dashboard.pdf" target="_blank" class="project-link-btn">📊 Open Power BI Dashboard</a>
         </div>
-        <div class="project-links">
-          <a href="https://gaurangtiwari22.github.io/Gaurang_Tiwari_Ecommerce_Dashboard.pdf" target="_blank" class="project-link">📊 Open Power BI Dashboard</a>
+        <div class="project-metrics">
+          <div class="pm"><div class="pm-val">501</div><div class="pm-label">Orders</div></div>
+          <div class="pm"><div class="pm-val">₹6.97L</div><div class="pm-label">Revenue</div></div>
+          <div class="pm"><div class="pm-val">12.57%</div><div class="pm-label">Return Rate</div></div>
         </div>
-      </div>
-      <div class="project-metrics">
-        <div class="pm"><div class="pm-val">501</div><div class="pm-label">Orders</div></div>
-        <div class="pm"><div class="pm-val">₹6.97L</div><div class="pm-label">Revenue</div></div>
-        <div class="pm"><div class="pm-val">12.57%</div><div class="pm-label">Return Rate</div></div>
       </div>
     </div>
 
+    <!-- PROJECT 2 — EXCEL -->
     <div class="project-card">
-      <div>
-        <div class="project-badge badge-excel">Excel Analysis</div>
-        <div class="project-title">E-Commerce Excel Analysis</div>
-        <div class="project-desc">Complete Excel analysis on the same 501-order dataset. Built SUMIF for category revenue, AVERAGEIF for city ratings, VLOOKUP live order search tool, conditional formatting for returns and deliveries, data validation dropdowns, and a Dashboard with 7 live KPI cards connected to pivot charts.</div>
-        <div class="project-tools">
-          <span class="ptool">VLOOKUP</span>
-          <span class="ptool">SUMIF</span>
-          <span class="ptool">Pivot Tables</span>
-          <span class="ptool">KPI Dashboard</span>
-          <span class="ptool">Conditional Formatting</span>
+      <div class="project-top">
+        <div>
+          <div class="project-badge badge-excel">Excel Analysis</div>
+          <div class="project-title">E-Commerce Excel Analysis</div>
+          <div class="project-desc">Complete Excel analysis on 501 E-Commerce orders. Built SUMIF for category revenue, AVERAGEIF for city ratings, VLOOKUP live order search tool, conditional formatting for returns and deliveries, data validation dropdowns, and a Dashboard with 7 live KPI cards and pivot charts.</div>
+          <div class="project-tools">
+            <span class="ptool">VLOOKUP</span>
+            <span class="ptool">SUMIF</span>
+            <span class="ptool">Pivot Tables</span>
+            <span class="ptool">KPI Dashboard</span>
+            <span class="ptool">Conditional Formatting</span>
+          </div>
+          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/Ecommerce_Analytics_Dataset.xlsx" target="_blank" class="project-link-btn">📂 Download Excel File</a>
         </div>
-        <div class="project-links">
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/sales.csv.xlsx" target="_blank" class="project-link">📂 Open Excel File</a>
+        <div class="project-metrics">
+          <div class="pm"><div class="pm-val">8</div><div class="pm-label">Formulas</div></div>
+          <div class="pm"><div class="pm-val">7</div><div class="pm-label">KPI Cards</div></div>
+          <div class="pm"><div class="pm-val">501</div><div class="pm-label">Rows</div></div>
         </div>
-      </div>
-      <div class="project-metrics">
-        <div class="pm"><div class="pm-val">8</div><div class="pm-label">Formulas</div></div>
-        <div class="pm"><div class="pm-val">7</div><div class="pm-label">KPI Cards</div></div>
-        <div class="pm"><div class="pm-val">501</div><div class="pm-label">Rows</div></div>
       </div>
     </div>
 
+    <!-- PROJECT 3 — SQL WITH GALLERY -->
     <div class="project-card">
-      <div>
-        <div class="project-badge badge-sql">SQL Project</div>
-        <div class="project-title">E-Commerce SQL Business Queries</div>
-        <div class="project-desc">Wrote 5 targeted business SQL queries on E-Commerce data using SELECT, WHERE, GROUP BY, ORDER BY, and aggregate functions. Extracted revenue by category (Home & Kitchen led), city-wise order distribution, and returned orders with reasons.</div>
-        <div class="project-tools">
-          <span class="ptool">SQL</span>
-          <span class="ptool">SQLite</span>
-          <span class="ptool">GROUP BY</span>
-          <span class="ptool">SUM/COUNT/AVG</span>
+      <div class="project-top">
+        <div>
+          <div class="project-badge badge-sql">SQL Project</div>
+          <div class="project-title">E-Commerce SQL Business Queries</div>
+          <div class="project-desc">Wrote 5 targeted business SQL queries on E-Commerce data using SELECT, WHERE, GROUP BY, ORDER BY, and aggregate functions. Extracted revenue by category, city-wise order distribution, and returned orders with reasons.</div>
+          <div class="project-tools">
+            <span class="ptool">SQL</span>
+            <span class="ptool">SQLite</span>
+            <span class="ptool">GROUP BY</span>
+            <span class="ptool">SUM/COUNT/AVG</span>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query1_AllData.png" target="_blank" class="project-link">🔍 Query 1 — All Data</a>
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query2_DeliveredOrders.png" target="_blank" class="project-link">🔍 Query 2 — Delivered</a>
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query3_OrdersByCity.png" target="_blank" class="project-link">🔍 Query 3 — By City</a>
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query4_RevenueByCategory.png" target="_blank" class="project-link">🔍 Query 4 — Revenue</a>
-          <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query5_ReturnedOrders.png" target="_blank" class="project-link">🔍 Query 5 — Returns</a>
+        <div class="project-metrics">
+          <div class="pm"><div class="pm-val">5</div><div class="pm-label">Queries</div></div>
+          <div class="pm"><div class="pm-val">5</div><div class="pm-label">Insights</div></div>
         </div>
       </div>
-      <div class="project-metrics">
-        <div class="pm"><div class="pm-val">5</div><div class="pm-label">Queries</div></div>
-        <div class="pm"><div class="pm-val">5</div><div class="pm-label">Insights</div></div>
-        <div class="pm"><div class="pm-val">10</div><div class="pm-label">Data Rows</div></div>
+      <!-- SQL IMAGE GALLERY -->
+      <div class="sql-gallery">
+        <div class="gallery-header">
+          <span class="gallery-title">// SQL Query Screenshots</span>
+          <span class="gallery-counter" id="gallery-counter">1 / 5</span>
+        </div>
+        <div class="gallery-img-wrap">
+          <img id="gallery-img" src="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query1_AllData.png" alt="SQL Query"/>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-btn" onclick="prevImg()">← Prev</button>
+          <div class="gallery-dots" id="gallery-dots"></div>
+          <button class="gallery-btn" onclick="nextImg()">Next →</button>
+        </div>
       </div>
     </div>
 
@@ -421,27 +447,27 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
         <div class="cert-icon">📗</div>
         <div>
           <div class="cert-name">Introduction to MS Excel</div>
-          <div class="cert-by">Certified Course</div>
+          <div class="cert-by">Certified Course · Code: 9982796</div>
           <div class="cert-date">March 2026</div>
         </div>
       </div>
-      <div class="cert-img-wrap">
-        <embed src="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/certificates/MS%20EXCEL%20Certificate.pdf" type="application/pdf"/>
-      </div>
+      <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/certificates/MS%20EXCEL%20Certificate.pdf" target="_blank" class="cert-pdf-btn">
+        📄 Click to Open MS Excel Certificate
+      </a>
     </div>
 
     <div class="cert-item">
       <div class="cert-header">
-        <div class="cert-icon">🌐</div>
+        <div class="cert-icon">🗄️</div>
         <div>
           <div class="cert-name">SQL Certificate</div>
           <div class="cert-by">Certified Course</div>
           <div class="cert-date">2026</div>
         </div>
       </div>
-      <div class="cert-img-wrap">
-        <embed src="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/certificates/SQL_Certificate.pdf" type="application/pdf"/>
-      </div>
+      <a href="https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/certificates/SQL_Certificate.pdf" target="_blank" class="cert-pdf-btn">
+        📄 Click to Open SQL Certificate
+      </a>
     </div>
 
   </div>
@@ -468,11 +494,13 @@ footer{text-align:center;padding:2rem;border-top:1px solid var(--border);color:v
 </footer>
 
 <script>
+// Scroll animations
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
 }, {threshold:0.08});
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// Typing animation
 const roles = ['Data Analyst', 'Business Analyst', 'Power BI Developer', 'SQL Practitioner', 'Dashboard Builder'];
 let ri=0,ci=0,del=false;
 const el = document.getElementById('typed-role');
@@ -484,6 +512,38 @@ function type(){
   setTimeout(type,del?45:90);
 }
 type();
+
+// SQL Gallery
+const imgs = [
+  'https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query1_AllData.png',
+  'https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query2_DeliveredOrders.png',
+  'https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query3_OrdersByCity.png',
+  'https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query4_RevenueByCategory.png',
+  'https://raw.githubusercontent.com/gaurangtiwari22/gaurangtiwari22.github.io/main/projects/SQL_Query5_ReturnedOrders.png'
+];
+let cur=0;
+const imgEl=document.getElementById('gallery-img');
+const counter=document.getElementById('gallery-counter');
+const dotsEl=document.getElementById('gallery-dots');
+
+// Create dots
+imgs.forEach((_,i)=>{
+  const d=document.createElement('div');
+  d.className='gallery-dot'+(i===0?' active':'');
+  d.onclick=()=>goTo(i);
+  dotsEl.appendChild(d);
+});
+
+function updateGallery(){
+  imgEl.src=imgs[cur];
+  counter.textContent=(cur+1)+' / '+imgs.length;
+  document.querySelectorAll('.gallery-dot').forEach((d,i)=>{
+    d.classList.toggle('active',i===cur);
+  });
+}
+function nextImg(){cur=(cur+1)%imgs.length;updateGallery();}
+function prevImg(){cur=(cur-1+imgs.length)%imgs.length;updateGallery();}
+function goTo(i){cur=i;updateGallery();}
 </script>
 </body>
 </html>
